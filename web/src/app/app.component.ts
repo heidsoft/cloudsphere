@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Jsonp, URLSearchParams } from '@angular/http';
+import {Http,URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +12,18 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AppComponent {
   title = 'app works!';
-
-  constructor(private jsonp: Jsonp) {}
-  search (term: string) {
-    let wikiUrl = 'http://en.wikipedia.org/w/api.php';
+  constructor(private myjsonp: Http) {
+    let wikiUrl = 'http://10.0.2.209:8009/api/login';
     let params = new URLSearchParams();
-    params.set('search', term); // the user's search value
-    params.set('action', 'opensearch');
-    params.set('format', 'json');
-    params.set('callback', 'JSONP_CALLBACK');
-    // TODO: Add error handling
-    return this.jsonp
-               .get(wikiUrl, { search: params }).subscribe();
+    params.set('username', 'admin'); // the user's search value
+    params.set('password', 'zabbix');
+    console.log(myjsonp);
+    myjsonp.post(wikiUrl, { search: params }).subscribe((res) => {
+       console.log("response......start");
+       console.log(res);
+       console.log("response......end");
+    });
+          
+    
   }
 }
