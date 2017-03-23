@@ -4,20 +4,30 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
 import { AppComponent } from './app.component';
-import { TreeListComponent } from './tree.component';
+import { HomeComponent } from './home/home.component';
+import { ResourceComponent } from './resource/resource.component';
+import { ContentComponent } from './resource/content/content.component';
+import { MenuListComponent } from './resource/menu/menu.component';
 import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 
 
 const appRoutes: Routes = [
-  { path: 'tree', component: TreeListComponent },
-  // { path: '',   redirectTo: '/tree', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'resource', component: ResourceComponent, children: [
+    { path: 'list1Content', component: MenuListComponent, outlet: 'list1' },
+    { path: 'list2Content', component: ContentComponent, outlet: 'list2' }
+  ] },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeListComponent
+    HomeComponent,
+    ResourceComponent,
+    MenuListComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

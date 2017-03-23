@@ -1,13 +1,13 @@
 <clr-main-container>
   <clr-header>
     <div class="branding">
-      <a href="#" class="nav-link">
+      <a routerLink="home" class="nav-link">
         <clr-icon shape="vm-bug"></clr-icon>
         <span class="title">下一代云管理平台</span>
       </a>
     </div>
-    <div class="header-nav" [clr-nav-level]="1">
-      <a class="active nav-link" href="javascript://"><span class="nav-text">资源服务目录</span></a>
+    <div class="header-nav" >
+      <a class="active nav-link" [routerLink]="['/resource', {outlets: {'list1': ['list1Content'], 'list2': ['list2Content']}}]"><span class="nav-text">资源服务目录</span></a>
       <a class="nav-link" href="javascript://"><span class="nav-text">资源统计分析</span></a>
     </div>
     <form class="search">
@@ -30,30 +30,6 @@
     </div>
   </clr-header>
   <div class="content-container">
-    <div class="content-container">
-      <div class="content-area">
-        <router-outlet></router-outlet>
-      </div>
-      <nav class="sidenav">
-        <clr-tree-node [clrTreeNodeExpanded]="true">
-          <b>服务目录</b>
-          <clr-tree-node>
-            <a
-              [routerLink]="['/tree']"
-              class="clr-treenode-link"
-              routerLinkActive="active">虚拟机管理</a>
-          </clr-tree-node>
-        </clr-tree-node>
-        <clr-tree-node [clrTreeNodeExpanded]="true">
-          <b>服务申请</b>
-          <clr-tree-node>
-            <a
-              [routerLink]="['/tree']"
-              class="clr-treenode-link"
-              routerLinkActive="active">容器管理</a>
-          </clr-tree-node>
-        </clr-tree-node>
-      </nav>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </clr-main-container>
