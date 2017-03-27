@@ -3,6 +3,10 @@
 
 ![NgCloud](/doc/image/ngcloud.png)
 
+# Feature
+- Dashboard(Docker info,Vcenter info, Zabbix info)
+
+
 
 # Ref
 - https://embed.plnkr.co/?show=preview
