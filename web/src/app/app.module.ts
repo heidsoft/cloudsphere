@@ -3,42 +3,59 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ResourceComponent } from './resource/resource.component';
-import { ContentComponent } from './resource/content/content.component';
-import { MenuListComponent } from './resource/menu/menu.component';
 import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { routing }        from './app.routing';
 
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'resource', component: ResourceComponent, children: [
-    { path: 'list1Content', component: MenuListComponent, outlet: 'list1' },
-    { path: 'list2Content', component: ContentComponent, outlet: 'list2' }
-  ] },
-];
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './_guards/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/index';
+import { LoginComponent } from './login/index';
+import { HomeComponent } from './home/home.component';
+
+import { CatalogComponent } from './service/catalog.component';
+import { ContentComponent } from './service/content/content.component';
+import { MenuListComponent } from './service/menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    LoginComponent,
     HomeComponent,
-    ResourceComponent,
+    CatalogComponent,
     MenuListComponent,
     ContentComponent
   ],
   imports: [
     BrowserModule,
     ClarityModule.forRoot(),
-    RouterModule.forRoot(appRoutes),
+    routing,
     FormsModule,
     HttpModule,
     JsonpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
+
+    // providers used to create fake backend
+    fakeBackendProvider,
+    MockBackend,
+    BaseRequestOptions
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

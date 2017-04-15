@@ -1,181 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          vCenter
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            1024
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          Docker
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            容器
-          </div>
-          <div class="card-text">
-            1004
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          OpenStack
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            76
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
+<clr-main-container>
+<clr-header>
+  <div class="branding">
+    <a routerLink="dashboard" class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">下一代云管理平台</span>
+    </a>
   </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          阿里云
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            1024
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          亚马逊
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            S3
-          </div>
-          <div class="card-text">
-            7
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          Azure
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            99
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
+  <div class="header-nav" >
+    <a class="active nav-link"  routerLink="serviceCatalog"><span class="nav-text">资源服务目录</span></a>
+    <a class="nav-link" href="javascript://"><span class="nav-text">资源统计分析</span></a>
   </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          腾讯云
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            102
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="资源搜索">
+    </label>
+  </form>
+  <div class="header-actions">
+    <clr-dropdown [clrMenuPosition]="'bottom-right'">
+      <button class="nav-icon" clrDropdownToggle>
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://" clrDropdownItem>系统帮助</a>
+        <a href="javascript://" clrDropdownItem>系统信息</a>
+        <a href="javascript://" clrDropdownItem>退出</a>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          UCloud
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            103
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          青云
-        </div>
-        <div class="card-block">
-          <div class="card-title">
-            虚拟机
-          </div>
-          <div class="card-text">
-            75
-          </div>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-sm btn-link">资源控制台</button>
-          <button class="btn btn-sm btn-link">分析资源</button>
-        </div>
-      </div>
-    </div>
+    </clr-dropdown>
   </div>
+</clr-header>
+<div class="content-container">
+  <router-outlet></router-outlet>
 </div>
+</clr-main-container>

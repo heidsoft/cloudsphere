@@ -5,10 +5,10 @@ import { ContentComponent } from './content/content.component';
 
 
 @Component({
-  selector: 'resource-app',
-  templateUrl: './resource.component.html',
+  selector: 'app-service-catalog',
+  templateUrl:'./catalog.component.html'
 })
-export class ResourceComponent implements OnInit {
+export class CatalogComponent implements OnInit {
   ngOnInit() {
 
   }
