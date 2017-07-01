@@ -44,8 +44,12 @@ dependencies {
 
 	compile 'org.springframework.cloud:spring-cloud-starter-config'
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.5'
+
+	// https://mvnrepository.com/artifact/com.sun.jersey/jersey-server
+	compile group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.3'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

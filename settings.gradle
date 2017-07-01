@@ -1,0 +1,6 @@
+rootProject.name = 'NgCloud'
+
+include 'ngcloud-client'
+include 'ngcloud-server'
+include 'ngcloud-web'
+
