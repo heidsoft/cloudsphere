@@ -1,3 +1,13 @@
+# 修改记录
+## 2017-0701
+```
+ngcloud-web 
+1.upgrade angular-cli@1.3-beta
+2.upgrade MutationObserver
+3.upgrade vmware clarity
+4.use yarn package 
+5.use json-server as a rest server
+```
 # bootstrap 
 ```
 .col-xs- 超小屏幕 手机 (<768px)
