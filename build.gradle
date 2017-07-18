@@ -2,7 +2,10 @@ buildscript {
 	ext {
 		springBootVersion = '1.5.3.RELEASE'
 	}
+	//脚本使用仓库
 	repositories {
+		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
@@ -31,7 +34,10 @@ jar {
 
 sourceCompatibility = 1.8
 
+//项目中使用的仓库
 repositories {
+	maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+	mavenLocal()
 	mavenCentral()
 }
 
