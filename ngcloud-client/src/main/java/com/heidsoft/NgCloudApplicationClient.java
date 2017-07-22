@@ -2,6 +2,7 @@ package com.heidsoft;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -16,6 +17,7 @@ import java.util.List;
 @EnableDiscoveryClient
 @EnableEurekaClient
 @SpringBootApplication
+@EnableAutoConfiguration
 public class NgCloudApplicationClient {
     public static void main(String[] args) {
         SpringApplication.run(NgCloudApplicationClient.class, args);
