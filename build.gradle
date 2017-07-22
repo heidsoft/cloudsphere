@@ -45,6 +45,7 @@ subprojects{
 		jcenter()
 		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 		maven { url 'https://repo.spring.io/release/' }
+		maven { url 'https://repo.spring.io/milestone' }
 		maven { url "http://repo.spring.io/libs-snapshot-local" }
 		maven { url "http://repo.spring.io/libs-milestone-local" }
 		maven { url "http://repo.spring.io/libs-release-local" }

@@ -2,6 +2,8 @@
 开源CMP系统
 
 # 系统设计
+## 服务注册
+![服务注册](/doc/image/spring-cloud-service-discovery.png)
 
 ## 登录界面
 ![Login](/doc/image/login.png)
@@ -9,11 +11,20 @@
 ## 资源服务目录
 ![NgCloud](/doc/image/ngcloud.png)
 
+
+
 # Feature
 
 - Dashboard(Docker info,Vcenter info, Zabbix info)
 
 # 技术架构
+
+## spring-cloud
+http://blog.csdn.net/forezp/article/details/69696915
+http://blog.csdn.net/forezp/article/details/69788938
+https://springcloud.cc/
+https://github.com/spring-cloud-samples/eureka/tree/master/src/main
+http://spring-cloud.io/reference/eureka/
 
 ## gradle 
 ```
