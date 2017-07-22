@@ -1,6 +1,6 @@
-rootProject.name = 'NgCloud'
+rootProject.name = 'ngcloud'
 
 include 'ngcloud-client'
 include 'ngcloud-server'
-include 'ngcloud-web'
+//include 'ngcloud-web'
 
