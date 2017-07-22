@@ -13,18 +13,23 @@
 
 
 
-# Feature
+# 功能设计
 
 - Dashboard(Docker info,Vcenter info, Zabbix info)
 
 # 技术架构
 
 ## spring-cloud
-http://blog.csdn.net/forezp/article/details/69696915
-http://blog.csdn.net/forezp/article/details/69788938
-https://springcloud.cc/
-https://github.com/spring-cloud-samples/eureka/tree/master/src/main
-http://spring-cloud.io/reference/eureka/
+
+- http://blog.csdn.net/forezp/article/details/69696915
+
+- http://blog.csdn.net/forezp/article/details/69788938
+
+- https://springcloud.cc/
+
+- https://github.com/spring-cloud-samples/eureka/tree/master/src/main
+
+- http://spring-cloud.io/reference/eureka/
 
 ## gradle 
 ```
