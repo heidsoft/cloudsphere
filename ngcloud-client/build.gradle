@@ -10,6 +10,5 @@ jar {
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.4.RELEASE'
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

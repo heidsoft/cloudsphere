@@ -7,3 +7,6 @@ server:
 spring:
   application:
     name: ngcloud-ribbon
+  zipkin:
+      enabled: true
+      baseUrl: http://127.0.0.1:9411
