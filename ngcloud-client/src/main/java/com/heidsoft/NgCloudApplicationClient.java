@@ -20,6 +20,7 @@ import java.util.List;
 @EnableAutoConfiguration
 public class NgCloudApplicationClient {
     public static void main(String[] args) {
+
         SpringApplication.run(NgCloudApplicationClient.class, args);
     }
 
