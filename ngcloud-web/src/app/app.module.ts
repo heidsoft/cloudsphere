@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
-import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { routing }        from './app.routing';
 
@@ -43,7 +42,6 @@ import { MenuListComponent } from './service/menu/menu.component';
     FormsModule,
     HttpModule,
     JsonpModule,
-    MaterialModule
   ],
   providers: [
     AuthGuard,
