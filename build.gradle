@@ -1,3 +1,9 @@
+allprojects {
+	repositories {
+		jcenter()
+	}
+}
+
 buildscript {
 	ext {
 		springBootVersion = '1.5.3.RELEASE'
@@ -5,38 +11,9 @@ buildscript {
 	//脚本使用仓库
 	repositories {
 		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-		maven {url "http://repo.spring.io/libs-snapshot-local" }
-		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
-
-
-
-
-
-//allprojects{
-//	apply plugin: 'idea'
-//	apply plugin: 'spring-boot'
-//	jar {
-//		baseName = 'ngcloud'
-//		version = '0.0.1-SNAPSHOT'
-//	}
-//
-//	sourceCompatibility = "1.8"
-//	targetCompatibility = "1.8"
-//}
-//
-//
-//subprojects{
-//
-//}
-//
-//
-//
-//
-
-
 
