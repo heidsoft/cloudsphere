@@ -9,8 +9,6 @@ dependencyManagement {
 
 //项目中使用的仓库
 repositories {
-    jcenter()
-    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     maven { url 'https://repo.spring.io/release/' }
     maven { url 'https://repo.spring.io/milestone' }
     maven { url "http://repo.spring.io/libs-snapshot-local" }

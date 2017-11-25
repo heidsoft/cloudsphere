@@ -5,3 +5,5 @@ include 'ngcloud-server'
 include 'ngcloud-web'
 include 'ngcloud-ribbon'
 include 'ngcloud-session'
+include 'ngcloud-cmdb'
+

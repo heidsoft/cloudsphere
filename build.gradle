@@ -1,6 +1,9 @@
 allprojects {
-	repositories {
-		jcenter()
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
+
+	repositories{
+		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 	}
 }
 
