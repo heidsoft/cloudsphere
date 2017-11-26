@@ -7,5 +7,5 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 public interface CloudService {
-    public void test();
+    public String helloService();
 }
