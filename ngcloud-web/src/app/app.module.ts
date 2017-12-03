@@ -19,6 +19,10 @@ import { CatalogComponent } from './service/catalog.component';
 import { ContentComponent } from './service/content/content.component';
 import { MenuListComponent } from './service/menu/menu.component';
 import { AliyunComponent } from './aliyun/aliyun.component';
+import { QiniuComponent } from './qiniu/qiniu.component';
+import { QcloudComponent } from './qcloud/qcloud.component';
+import { UcloudComponent } from './ucloud/ucloud.component';
+import { AwsComponent } from './aws/aws.component';
 
 
 @NgModule({
@@ -30,7 +34,11 @@ import { AliyunComponent } from './aliyun/aliyun.component';
     CatalogComponent,
     MenuListComponent,
     ContentComponent,
-    AliyunComponent
+    AliyunComponent,
+    QiniuComponent,
+    QcloudComponent,
+    UcloudComponent,
+    AwsComponent
   ],
   imports: [
     BrowserModule,
