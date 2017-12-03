@@ -3,26 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
-import { RouterModule, Routes } from '@angular/router';
 import { routing }        from './app.routing';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
-
-import { AlertComponent } from './_directives/index';
-import { AuthGuard } from './_guards/index';
-import { AlertService, AuthenticationService, UserService } from './_services/index';
-
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/index';
-import { LoginComponent } from './login/index';
+
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 import { CatalogComponent } from './service/catalog.component';
 import { ContentComponent } from './service/content/content.component';
 import { MenuListComponent } from './service/menu/menu.component';
+import { AliyunComponent } from './aliyun/aliyun.component';
 
 
 @NgModule({
@@ -33,7 +29,8 @@ import { MenuListComponent } from './service/menu/menu.component';
     HomeComponent,
     CatalogComponent,
     MenuListComponent,
-    ContentComponent
+    ContentComponent,
+    AliyunComponent
   ],
   imports: [
     BrowserModule,
@@ -44,13 +41,6 @@ import { MenuListComponent } from './service/menu/menu.component';
     JsonpModule,
   ],
   providers: [
-    AuthGuard,
-    AlertService,
-    AuthenticationService,
-    UserService,
-
-    // providers used to create fake backend
-    fakeBackendProvider,
     MockBackend,
     BaseRequestOptions
   ],

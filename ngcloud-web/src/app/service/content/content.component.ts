@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import {State} from "clarity-angular";
-import {User} from "../../_models/user";
 @Component({
   selector: 'content-app',
   templateUrl: './content.component.html',
 })
 export class ContentComponent {
-  users: User[];
   total: number;
   loading: boolean = true;
 

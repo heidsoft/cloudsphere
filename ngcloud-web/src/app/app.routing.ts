@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/index';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { CatalogComponent } from './service/catalog.component';
 import { ContentComponent } from './service/content/content.component';
