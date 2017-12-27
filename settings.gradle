@@ -7,4 +7,5 @@ include 'ngcloud-ribbon'
 include 'ngcloud-session'
 include 'ngcloud-cmdb'
 include 'ngcloud-rest'
+include 'ngcloud-vue'
 

@@ -28,4 +28,12 @@ public class HelloController {
 
         return "Hello World";
     }
+
+    @RequestMapping(value = "/hello2",method = RequestMethod.GET)
+    public String index2(){
+        ServiceInstance instance = client.getLocalServiceInstance();
+        logger.info("/hello, host : "+ instance.getHost() + ", service_id:"+instance.getServiceId());
+
+        return "<html><body>aaaaaabbb</body></html>";
+    }
 }
