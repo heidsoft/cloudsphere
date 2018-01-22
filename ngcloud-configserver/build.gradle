@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE'
+    }
+}
+
+//项目中使用的仓库
+repositories {
+    mavenCentral()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    maven { url 'https://repo.spring.io/release/' }
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url "http://repo.spring.io/libs-snapshot-local" }
+    maven { url "http://repo.spring.io/libs-milestone-local" }
+    maven { url "http://repo.spring.io/libs-release-local" }
+}
+
+jar {
+    baseName = 'ngcloud-configserver'
+    version = '0.1.0'
+    manifest {
+        attributes 'Main-Class': 'com.heidsoft.ConfigServerApplication'
+    }
+}
+
+springBoot {
+    mainClass = "com.heidsoft.ConfigServerApplication"
+}
+
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.4.RELEASE'
+    compile group: 'org.springframework.cloud',name: 'spring-cloud-config-server'
+    compile group: 'org.springframework.cloud',name: 'spring-cloud-config-monitor'
+    compile group: 'org.springframework.cloud',name: 'spring-cloud-starter-stream-rabbit'
+    compile group: 'org.springframework.cloud',name: 'spring-cloud-starter-eureka'
+    testCompile group: 'org.springframework.boot',name: 'spring-boot-starter-test'
+}

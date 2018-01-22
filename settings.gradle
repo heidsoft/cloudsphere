@@ -8,4 +8,6 @@ include 'ngcloud-session'
 include 'ngcloud-cmdb'
 include 'ngcloud-rest'
 include 'ngcloud-vue'
+include 'ngcloud-configserver'
+include 'ngcloud-configclient'
 
