@@ -21,7 +21,7 @@ public class ConfigClientApplication {
     }
 
 
-    @Value("${foo}")
+    @Value("${ngcloud-configserver.foo}")
     String foo;
     @RequestMapping(value = "/hi")
     public String hi(){

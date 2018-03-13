@@ -10,4 +10,5 @@ include 'ngcloud-rest'
 include 'ngcloud-vue'
 include 'ngcloud-configserver'
 include 'ngcloud-configclient'
+include 'ngcloud-flume'
 

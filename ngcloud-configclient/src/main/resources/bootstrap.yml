@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: ngcloud-configserver
+      uri: http://localhost:8888/
+      profile: dev
+      label: master
+server:
+  port: 8881
