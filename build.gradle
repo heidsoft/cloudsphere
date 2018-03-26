@@ -1,22 +1,33 @@
+buildscript {
+//	ext {
+//		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+//	}
+//	//脚本使用仓库
+//	repositories {
+//		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+//	}
+//	dependencies {
+//		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//	}
+	ext {
+		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+	}
+	repositories {
+		mavenCentral()
+		maven { url 'https://repo.spring.io/libs-snapshot' }
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+	}
+}
+
+
 allprojects {
 	apply plugin: 'idea'
+	apply plugin: 'java'
 	apply plugin: 'eclipse'
 
 	repositories{
 		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 	}
 }
-
-buildscript {
-	ext {
-		springBootVersion = '1.5.3.RELEASE'
-	}
-	//脚本使用仓库
-	repositories {
-		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
-}
-

@@ -1,5 +1,6 @@
 apply plugin: 'java'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 dependencyManagement {
     imports {
@@ -27,7 +28,7 @@ jar {
 }
 
 springBoot {
-    mainClass = "com.heidsoft.ServiceRibbonApplication"
+    mainClassName = "com.heidsoft.ServiceRibbonApplication"
 }
 
 dependencies {
