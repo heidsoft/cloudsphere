@@ -11,4 +11,5 @@ include 'ngcloud-vue'
 include 'ngcloud-configserver'
 include 'ngcloud-configclient'
 include 'ngcloud-flume'
+include 'ngcloud-cloud'
 
