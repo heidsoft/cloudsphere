@@ -1,0 +1,5 @@
+#spring:
+#   data:
+#      elasticsearch:
+#          cluster-name: mw_content_metaservice
+#          cluster-nodes: es-node1:9300,es-node2:9300,es-node3:9300

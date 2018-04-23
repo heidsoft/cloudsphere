@@ -24,12 +24,12 @@ dependencies {
 
 
 jar {
-    baseName = 'ngcloud-server'
+    baseName = 'ngcloud-eureka'
     version = '0.0.1-SNAPSHOT'
 }
 
 springBoot {
-    mainClassName = "com.heidsoft.NgRegistryServer"
+    mainClassName = "com.heidsoft.EurekaServer"
 }
 
 dependencies {

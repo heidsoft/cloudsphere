@@ -1,7 +1,8 @@
-rootProject.name = 'ngcloud'
+rootProject.name = 'ngcloud'include 'ngcloud-flume'
+
 
 include 'ngcloud-client'
-include 'ngcloud-registry'
+include 'ngcloud-eureka'
 include 'ngcloud-web'
 include 'ngcloud-ribbon'
 include 'ngcloud-session'
