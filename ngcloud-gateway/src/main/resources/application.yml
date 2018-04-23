@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8300
+server:
+  port: 8005
+#management:
+#  security:
+#    enabled: false
