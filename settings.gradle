@@ -12,4 +12,5 @@ include 'ngcloud-configserver'
 include 'ngcloud-configclient'
 include 'ngcloud-flume'
 include 'ngcloud-cloud'
+include 'ngcloud-gateway'
 
