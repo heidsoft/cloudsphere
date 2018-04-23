@@ -1,4 +1,4 @@
-rootProject.name = 'ngcloud'include 'ngcloud-flume'
+rootProject.name = 'ngcloud'
 
 
 include 'ngcloud-client'
