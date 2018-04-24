@@ -8,6 +8,7 @@ spring:
 server:
   port: 1112
 
+# 服务注册
 eureka:
   client:
     #register-with-eureka: false
@@ -15,10 +16,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
 
+# 网关配置参数
 zuul:
   routes:
-    api-a.url.path: /api-a-url/**
-    api-a.url.url: http://www.baidu.com/
+    api-a.path: /api-a/**
+    api-a.serviceId: ngcloud-client
     #api-a.serviceId: compute-service
 
 #management:

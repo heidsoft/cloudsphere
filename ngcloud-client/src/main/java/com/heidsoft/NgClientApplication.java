@@ -1,14 +1,18 @@
 package com.heidsoft;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableDiscoveryClient
+/**
+ * 默认将服务注册到，服务中心
+ * @author heidsoft
+ */
 @SpringBootApplication
+@EnableEurekaClient
 public class NgClientApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NgClientApplication.class, args);
+        new SpringApplicationBuilder(NgClientApplication.class).web(true).run(args);
     }
 }
 
