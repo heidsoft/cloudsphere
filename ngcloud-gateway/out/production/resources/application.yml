@@ -1,10 +1,26 @@
 spring:
-  cloud:
-    consul:
-      host: localhost
-      port: 8300
+  application:
+    name: ngcloud-gateway
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8300
 server:
-  port: 8005
+  port: 1112
+
+eureka:
+  client:
+    #register-with-eureka: false
+    #fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+zuul:
+  routes:
+    api-a.url.path: /api-a-url/**
+    api-a.url.url: http://www.baidu.com/
+    #api-a.serviceId: compute-service
+
 #management:
 #  security:
 #    enabled: false

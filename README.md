@@ -19,6 +19,13 @@
 
 # 技术架构
 
+## 服务说明
+
+### 服务注册模块
+```
+ngcloud-eureka 端口1111
+```
+
 ## spring-cloud
 
 - http://blog.csdn.net/forezp/article/details/69696915
