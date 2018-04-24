@@ -1,10 +1,20 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.5.RELEASE"
+    }
+}
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: "io.spring.dependency-management"
 
 dependencyManagement {
-    imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE'
+    dependencies {
+        dependency group: 'org.springframework.cloud', name: 'spring-cloud-starter-parent', version: 'Camden.SR7', ext: 'pom'
     }
 }
 
@@ -12,14 +22,11 @@ dependencyManagement {
 repositories {
     maven { url 'https://repo.spring.io/release/' }
     maven { url 'https://repo.spring.io/milestone' }
-    maven { url "http://repo.spring.io/libs-snapshot-local" }
-    maven { url "http://repo.spring.io/libs-milestone-local" }
-    maven { url "http://repo.spring.io/libs-release-local" }
 }
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.5.8.RELEASE")
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 }
 
 
@@ -34,8 +41,11 @@ springBoot {
 
 dependencies {
 
-    compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.4.4.RELEASE'
+
 //    compile('io.zipkin.java:zipkin-server')
 //    runtime('io.zipkin.java:zipkin-autoconfigure-ui')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }

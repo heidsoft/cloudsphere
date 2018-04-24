@@ -23,8 +23,12 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+out
 ngcloud-configclient/out/
 ngcloud-configserver/out/
+ngcloud-client/out
+ngcloud-cloud/out
+
 
 
 
