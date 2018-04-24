@@ -21,9 +21,18 @@
 
 ## 服务说明
 
-### 服务注册模块
+### 服务模块
 ```
-ngcloud-eureka 端口1111
+
+ngcloud-client  1113
+ngcloud-eureka  1111
+ngcloud-gateway 1112
+
+
+路由转发
+
+http://localhost:1112/api-a/hello  --> http://localhost:1113/hello
+
 ```
 
 ## spring-cloud
