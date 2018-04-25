@@ -1,12 +1,15 @@
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-
-dependencyManagement {
-    imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE'
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE"
     }
 }
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
 
 //项目中使用的仓库
 repositories {
@@ -18,26 +21,21 @@ repositories {
     maven { url "http://repo.spring.io/libs-release-local" }
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-}
 
 jar {
-    baseName = 'ngcloud-frontend'
+    baseName = 'ngcloud-ribbon'
     version = '0.0.1'
 }
 
 springBoot {
-    mainClassName = "com.heidsoft.ServiceRibbonApplication"
+    mainClassName = "com.heidsoft.RibbonConsumerApplication"
 }
 
 dependencies {
-
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '2.0.0.M1'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.4.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '2.0.0.M2'
-    compile('org.springframework.cloud:spring-cloud-starter-sleuth')
-    compile('org.springframework.cloud:spring-cloud-sleuth-zipkin')
-    compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.4.4.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.4.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.4.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.12.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }

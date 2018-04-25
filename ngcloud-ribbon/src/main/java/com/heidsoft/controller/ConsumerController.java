@@ -2,7 +2,6 @@ package com.heidsoft.controller;
 
 import com.heidsoft.service.CloudService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

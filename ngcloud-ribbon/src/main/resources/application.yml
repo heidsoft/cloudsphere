@@ -1,12 +1,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:1111/eureka/
 server:
-  port: 8764
+  port: 1114
 spring:
   application:
     name: ngcloud-ribbon
-  zipkin:
-      enabled: true
-      baseUrl: http://127.0.0.1:9411
+#  zipkin:
+#      enabled: true
+#      baseUrl: http://127.0.0.1:9411
