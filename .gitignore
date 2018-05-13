@@ -1,4 +1,5 @@
 .gradle
+.DS_Store
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
@@ -32,3 +33,15 @@ ngcloud-cloud/out
 
 
 
+ngcloud-client/src/test/
+ngcloud-cloud/src/test/
+ngcloud-configclient/src/test/
+ngcloud-configserver/src/test/
+ngcloud-eureka/src/test/
+ngcloud-gateway/src/main/java/com/heidsoft/controller/
+ngcloud-gateway/src/test/
+ngcloud-ribbon/src/test/
+ngcloud-session/src/test/
+ngcloud-web/package-lock.json
+ngcloud-web/src/main/
+ngcloud-web/src/test/
