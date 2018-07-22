@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试自适应</title>
+</head>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .leftColumn {
+    width: 50%;
+    float: left;
+    background-color:yellow;
+    height:300px;
+  }
+
+  .rightColumn {
+    width: 50%;
+    float: left;
+    background-color:#7FFF9B;
+    height:300px;
+  }
+
+  @media (max-width: 400px) {
+    .leftColumn {
+      background-color:orange;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .leftColumn {
+      background-color:OrangeRed;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="leftColumn">
+  left
+</div>
+<div class="rightColumn">
+  right
+</div>
+</body>
+</html>
