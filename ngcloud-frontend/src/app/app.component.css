@@ -1,5 +1,6 @@
 .ng-header{
-  background-color: cornflowerblue;
+  background-color: #5c1ef9;
+  z-index: 99;
 }
 .ng-header-title{
   font-size: 40px;
@@ -9,6 +10,7 @@
 }
 
 .ng-navbar{
-  background-color: gold;
+  background-color: #5c1ef9;
   height: 768px;
+  z-index: 99;
 }

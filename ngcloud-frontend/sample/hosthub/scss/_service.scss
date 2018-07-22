@@ -1,0 +1,83 @@
+
+/* Feature Area css
+============================================================================================ */
+.service_area{
+	background: $baseColor;
+	position: relative;
+	overflow: hidden;
+	&:before{
+		content: "";
+		background: url(../img/map-bg.png) no-repeat scroll center center;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		width: 100%;
+	}
+	&.service_white{
+		background: #fff;
+		&:before{
+			display: none;
+		}
+		.service_item{
+			border-color: #eeeeee;
+			h4{
+				color: $dip;
+				i{
+					color: $baseColor;
+				}
+			}
+			p{
+				margin-bottom: 0px;
+				color: $pfont;
+				opacity: 1;
+			}
+			&:hover{
+				box-shadow: 0px 10px 30px 0px rgba(98, 71, 234, 0.1);
+				border-color: #fff;
+			}
+		}
+	}
+}
+.service_inner{
+	margin-bottom: -30px;
+}
+.service_item{
+	background: rgba(255, 255, 255, .10);
+	border-radius: 10px;
+	padding: 40px 60px 40px 40px;
+	border: 1px solid #9381eb;
+	margin-bottom: 30px;
+	@include transition;
+	h4{
+		font-size: 18px;
+		font-family: $rob;
+		font-weight: 500;
+		color: #fff;
+		margin-bottom: 20px;
+		i{
+			font-size: 24px;
+			padding-right: 15px;
+			position: relative;
+			top: 4px;
+		}
+	}
+	p{
+		margin-bottom: 0px;
+		color: #fff;
+		opacity: .6;
+	}
+	&:hover{
+		background: #fff;
+		color: #fff;
+		h4{
+			color: $dip;;
+		}
+		p{
+			color: $pfont;
+			opacity: 1;
+		}
+	}
+}
+/* End Feature Area css
+============================================================================================ */

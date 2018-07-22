@@ -1,0 +1,149 @@
+/* Feature Area css
+============================================================================================ */
+.feature_area{
+	
+}
+.feature_inner{}
+.feature_item{
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+	padding: 60px 20px 60px 30px;
+	@include transition;
+	h4{
+		color: $dip;
+		font-size: 20px;
+		font-weight: 500;
+		font-family: $rob;
+		margin-bottom: 25px;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+	&:hover{
+		box-shadow: 0px 10px 30px 0px rgba(98, 71, 234, 0.1);
+		border-color: #fff;
+	}
+}
+/* End Feature Area css
+============================================================================================ */
+
+/* End Feature Area css
+============================================================================================ */
+.solution_area{
+	background: #ec9d5f;
+	text-align: center;
+	.solution_inner{
+		color: #fff;
+		h4{
+			font-size: 36px;
+			margin-bottom: 16px;
+		}
+		p{
+			font-size: 14px;
+			opacity: .6;
+			max-width: 770px;
+			margin: 0px auto 35px;
+		}
+	}
+}
+/* End Feature Area css
+============================================================================================ */
+
+/* Question Area css
+============================================================================================ */
+.question_area{
+	.main_title{
+		p{
+			max-width: 816px;
+		}
+	}
+}
+.question_inner{
+	max-width: 750px;
+	margin: auto;
+	.nav.nav-tabs{
+		text-align: center;
+		border: none;
+		margin-bottom: 50px;
+		display: block;
+		a{
+			border: 1px solid #eeeeee;
+			display: inline-block;
+			margin-right: 16px;
+			border-radius: 0px;
+			line-height: 38px;
+			padding: 0px 28px;
+			font-weight: 700;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: $dip;
+			&:last-child{
+				margin-right: 0px;
+			}
+			&.active{
+				background: $baseColor;
+				border-color: $baseColor;
+				color: #fff;
+			}
+		}
+	}
+	.tab-content{
+		border: none;
+		.tab-pane{
+			border: none;
+			.card{
+				border: none;
+				.card-header{
+					border: none;
+					padding: 0px;
+					background: transparent;
+					button{
+						padding: 0px 30px;
+						display: block;
+						cursor: pointer;
+						width: 100%;
+						text-align: left;
+						line-height: 50px;
+						position: relative;
+						font-size: 16px;
+						font-weight: 500;
+						color: $baseColor;
+						font-family: $rob;
+						text-decoration: none;
+						border: none;
+						white-space: normal;
+						i{
+							position: absolute;
+							right: 30px;
+							top: 50%;
+							transform: translateY(-50%);
+							display: none;
+							& + i{
+								display: inline-block;
+							}
+						}
+						&.collapsed{
+							border-bottom: 1px solid #eeeeee;
+							color: $dip;
+							i{
+								display: inline-block;
+								& + i{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+				.card-body{
+					padding: 10px 30px 30px 30px;
+					font-size: 14px;
+					line-height: 24px;
+					font-family: $rob;
+					color: $pfont;
+				}
+			}
+		}
+	}
+}
+/* End Question Area css
+============================================================================================ */
