@@ -1,1 +1,14 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+.ng-header{
+  background-color: cornflowerblue;
+}
+.ng-header-title{
+  font-size: 40px;
+  margin: 0;
+  color: var(--yellow);
+  font-feature-settings: initial;
+}
+
+.ng-navbar{
+  background-color: gold;
+  height: 768px;
+}
