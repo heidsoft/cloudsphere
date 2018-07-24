@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @author heidsoft
  */
 @SpringBootApplication
-@EnableEurekaClient
+//@EnableEurekaClient
 public class NgClientApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(NgClientApplication.class).web(true).run(args);
