@@ -28,25 +28,25 @@ public class HelloController {
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
 
-    @Qualifier("simpleDiscoveryClient")
-    @Autowired
-    private DiscoveryClient client;
-
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String index(){
-        LOGGER.info("come in  index ....");
-
-        //获取服务实例列表
-        List<String> instances = client.getServices();
-        boolean isNullOrEmpty = org.springframework.util.ObjectUtils.isEmpty(instances);
-        if(!isNullOrEmpty){
-            for( String instance : instances){
-                LOGGER.info("service is --> {}",instance);
-            }
-        }
-
-        return "Hello World";
-    }
+//    @Qualifier("simpleDiscoveryClient")
+//    @Autowired
+//    private DiscoveryClient client;
+//
+//    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+//    public String index(){
+//        LOGGER.info("come in  index ....");
+//
+//        //获取服务实例列表
+//        List<String> instances = client.getServices();
+//        boolean isNullOrEmpty = org.springframework.util.ObjectUtils.isEmpty(instances);
+//        if(!isNullOrEmpty){
+//            for( String instance : instances){
+//                LOGGER.info("service is --> {}",instance);
+//            }
+//        }
+//
+//        return "Hello World";
+//    }
 
     @RequestMapping(value = "/hello2",method = RequestMethod.GET)
     public String index2(){
