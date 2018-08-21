@@ -3,15 +3,10 @@ package com.heidsoft.controller;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 
-import java.util.Collections;
-import java.util.List;
 
 /**
  * <p>
@@ -28,28 +23,11 @@ public class HelloController {
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
 
-//    @Qualifier("simpleDiscoveryClient")
-//    @Autowired
-//    private DiscoveryClient client;
-//
-//    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-//    public String index(){
-//        LOGGER.info("come in  index ....");
-//
-//        //获取服务实例列表
-//        List<String> instances = client.getServices();
-//        boolean isNullOrEmpty = org.springframework.util.ObjectUtils.isEmpty(instances);
-//        if(!isNullOrEmpty){
-//            for( String instance : instances){
-//                LOGGER.info("service is --> {}",instance);
-//            }
-//        }
-//
-//        return "Hello World";
-//    }
 
     @RequestMapping(value = "/hello2",method = RequestMethod.GET)
     public String index2(){
-        return "<html><body>aaaaaabbb</body></html>";
+
+        LOGGER.info("hello");
+        return "test";
     }
 }

@@ -20,12 +20,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVer"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVer"
-        classpath "io.spring.gradle:propdeps-plugin:$propdepsPluginVer"
-        // gradle dependencyUpdates -Drevision=release
-        classpath "com.github.ben-manes:gradle-versions-plugin:$versionPluginVer"
-        classpath "gradle.plugin.com.palantir.gradle.docker:gradle-docker:$dockerPluginVer"
+
+
+
     }
 }
 apply plugin: "java"
@@ -37,9 +35,6 @@ repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     maven { url 'https://repo.spring.io/release/' }
     maven { url 'https://repo.spring.io/milestone' }
-    maven { url "http://repo.spring.io/libs-snapshot-local" }
-    maven { url "http://repo.spring.io/libs-milestone-local" }
-    maven { url "http://repo.spring.io/libs-release-local" }
 }
 
 
@@ -57,7 +52,7 @@ springBoot {
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.2.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.4.5.RELEASE'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.2.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
