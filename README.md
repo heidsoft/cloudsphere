@@ -18,6 +18,11 @@
 - Dashboard(Docker info,Vcenter info, Zabbix info)
 
 # 技术架构
+```
+1.加入spring cloud 
+2.升级spring boot 为2.0
+
+```
 
 ## 服务说明
 

@@ -1,41 +1,10 @@
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE"
-    }
-}
-apply plugin: "java"
-apply plugin: "org.springframework.boot"
-
-//项目中使用的仓库
-repositories {
-    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-    maven { url 'https://repo.spring.io/release/' }
-    maven { url 'https://repo.spring.io/milestone' }
-    maven { url "http://repo.spring.io/libs-snapshot-local" }
-    maven { url "http://repo.spring.io/libs-milestone-local" }
-    maven { url "http://repo.spring.io/libs-release-local" }
-}
-
-
-jar {
-    baseName = 'ngcloud-ribbon'
-    version = '0.0.1'
-}
-
 springBoot {
     mainClassName = "com.heidsoft.RibbonConsumerApplication"
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.4.4.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.4.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.4.RELEASE'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.12.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

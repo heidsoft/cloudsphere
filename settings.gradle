@@ -3,11 +3,11 @@ rootProject.name = 'ngcloud'
 
 include 'ngcloud-client'
 include 'ngcloud-eureka'
-include 'ngcloud-web'
 include 'ngcloud-ribbon'
 include 'ngcloud-session'
 include 'ngcloud-configserver'
 include 'ngcloud-configclient'
 include 'ngcloud-cloud'
 include 'ngcloud-gateway'
+include 'ngcloud-frontend'
 

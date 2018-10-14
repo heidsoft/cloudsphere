@@ -1,30 +1,39 @@
 buildscript {
-//	ext {
-//		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
-//	}
-//	//脚本使用仓库
-//	repositories {
-//		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-//	}
-//	dependencies {
-//		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-//	}
+	//定义扩展属性
 	ext {
-		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+		springBootVersion = "2.0.5.RELEASE"
+		springBootStarterTestVersion = "2.0.5.RELEASE"
+		junitVersion = "4.12"
 	}
+
 	repositories {
 		mavenCentral()
-		maven { url 'https://repo.spring.io/libs-snapshot' }
-	}
-	dependencies {
-		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        maven { url "https://repo.spring.io/libs-release" }
+        maven { url "https://repo.spring.io/libs-snapshot" }
 	}
 }
 
 
-allprojects {
+plugins {
+	id "org.springframework.boot" version "2.0.5.RELEASE" apply false
+}
 
+subprojects {
 	repositories{
 		maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 	}
+
+	apply plugin: "java"
+	apply plugin: "org.springframework.boot"
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	dependencies {
+		compile group: "org.springframework.boot", name: "spring-boot-starter-web", version: "$springBootVersion"
+		testCompile group: "org.springframework.boot", name: "spring-boot-starter-test", version: "$springBootVersion"
+		testCompile group: "junit", name: "junit", version: "$junitVersion"
+	}
 }
+
+

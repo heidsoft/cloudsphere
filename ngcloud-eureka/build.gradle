@@ -1,41 +1,7 @@
-buildscript {
-    repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE"
-    }
-}
-apply plugin: "java"
-apply plugin: "org.springframework.boot"
-
-
-//项目中使用的仓库
-repositories {
-    jcenter()
-    maven { url 'https://repo.spring.io/release/' }
-    maven { url "http://repo.spring.io/libs-snapshot-local" }
-    maven { url "http://repo.spring.io/libs-milestone-local" }
-    maven { url "http://repo.spring.io/libs-release-local" }
-}
-
-jar {
-    baseName = 'ngcloud-eureka'
-    version = '0.0.1-SNAPSHOT'
-}
-
 springBoot {
     mainClassName = "com.heidsoft.EurekaServer"
 }
-/**
- * 依赖包配置
- */
+
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.3.3.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.4.4.RELEASE'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.12.RELEASE'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.4.5.RELEASE'
 }
