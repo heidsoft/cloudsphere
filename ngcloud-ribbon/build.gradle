@@ -6,5 +6,4 @@ dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.4.4.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.4.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.4.RELEASE'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
