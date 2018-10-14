@@ -1,3 +1,5 @@
+package com.heidsoft;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
