@@ -1,0 +1,35 @@
+<clr-main-container>
+<clr-header>
+  <div class="branding">
+    <a routerLink="dashboard" class="nav-link">
+      <clr-icon shape="vm-bug"></clr-icon>
+      <span class="title">下一代云管理平台</span>
+    </a>
+  </div>
+  <div class="header-nav" >
+    <a class="active nav-link"  routerLink="serviceCatalog"><span class="nav-text">资源服务目录</span></a>
+    <a class="nav-link" href="javascript://"><span class="nav-text">资源统计分析</span></a>
+  </div>
+  <form class="search">
+    <label for="search_input">
+      <input id="search_input" type="text" placeholder="资源搜索">
+    </label>
+  </form>
+  <div class="header-actions">
+    <clr-dropdown [clrMenuPosition]="'bottom-right'">
+      <button class="nav-icon" clrDropdownToggle>
+        <clr-icon shape="cog"></clr-icon>
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a href="javascript://" clrDropdownItem>系统帮助</a>
+        <a href="javascript://" clrDropdownItem>系统信息</a>
+        <a href="javascript://" clrDropdownItem>退出</a>
+      </div>
+    </clr-dropdown>
+  </div>
+</clr-header>
+<div class="content-container">
+  <router-outlet></router-outlet>
+</div>
+</clr-main-container>

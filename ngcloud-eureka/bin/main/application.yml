@@ -1,0 +1,13 @@
+server:
+  port: 1111
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #自己不注册自己
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+

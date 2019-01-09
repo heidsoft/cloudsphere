@@ -1,0 +1,19 @@
+<div class="content-container">
+  <nav class="sidenav">
+    <clr-tree-node [clrTreeNodeExpanded]="true">
+      <b>服务目录</b>
+      <clr-tree-node>
+        <a routerLink="content" class="clr-treenode-link" routerLinkActive="active">虚拟机管理</a>
+      </clr-tree-node>
+    </clr-tree-node>
+    <clr-tree-node [clrTreeNodeExpanded]="true">
+      <b>服务申请</b>
+      <clr-tree-node>
+        <a [routerLink]="['/tree']" class="clr-treenode-link" routerLinkActive="active">容器管理</a>
+      </clr-tree-node>
+    </clr-tree-node>
+  </nav>
+  <div class="content-area">
+    <router-outlet></router-outlet>
+  </div>
+</div>
