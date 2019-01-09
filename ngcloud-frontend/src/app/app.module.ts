@@ -9,8 +9,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/index';
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/home.component';
-import { CatalogComponent } from './service/catalog.component';
-import { ContentComponent } from './service/content/content.component';
 import { MenuListComponent } from './service/menu/menu.component';
 
 
@@ -20,12 +18,11 @@ import { MenuListComponent } from './service/menu/menu.component';
     DashboardComponent,
     LoginComponent,
     HomeComponent,
-    CatalogComponent,
     MenuListComponent,
-    ContentComponent
   ],
   imports: [
     BrowserModule,
+    ClarityModule,
     routing,
     FormsModule,
     HttpClientModule,
